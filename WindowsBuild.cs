@@ -10,9 +10,9 @@ public class WindowsBuild
     {
         string outputPath = "Builds/Windows/SUTRA_WIN.exe";
         string[] scenes = new[] {
-            "Assets/Sutra/Assets/Scenes/***.unity",
-            "Assets/Sutra/Assets/Scenes/***.unity",
-            "Assets/Sutra/Assets/Scenes/***.unity"
+            "Assets/Sutra/Assets/Scenes/SceneActivator.unity",
+            "Assets/Sutra/Assets/Scenes/ServerScene.unity",
+            "Assets/Sutra/Assets/Scenes/ClientScene.unity"
         };
 
         // Ensure directory exists
@@ -28,7 +28,7 @@ public class WindowsBuild
         BuildReport report = BuildPipeline.BuildPlayer(buildPlayerOptions);
         if (report.summary.result == BuildResult.Succeeded)
         {
-            Debug.Log("Headless Linux server build succeeded.");
+            Debug.Log("Windows build succeeded.");
         }
         else
         {
